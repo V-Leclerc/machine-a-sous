@@ -1,8 +1,37 @@
+let data = {
+    tokens: 0,
+    turns: 0
+};
+
+function newGame() {
+    const start = document.getElementById("start");
+    start.addEventListener('click', function(e) {
+        e.preventDefault();
+        data.tokens = 50;
+        data.turns = 0;
+        updateTokens();
+    });
+}
+
+function updateTokens() {
+    const tokens = document.getElementById("tokens");
+    const turns = document.getElementById("turns");
+    tokens.innerHTML = "Jetons : " + data.tokens;
+    turns.innerHTML = "Nombre de tours : " + data.turns;
+}
+
 function useMachine() {
     const goButton = document.getElementById("go");
     goButton.addEventListener('click', function(e) {
         e.preventDefault();
-        updateRow();
+        if (data.tokens >= 5) {
+            data.tokens -= 5;
+            data.turns += 1;
+            updateRow();
+        } else {
+            data.tokens = "GAME OVER";
+            updateTokens();
+        }
     });
 }
 
@@ -18,6 +47,7 @@ function updateRow() {
             row.appendChild(cell);
         }
     }
+    updateTokens();
 }
 
 function newNumber() {
@@ -25,3 +55,4 @@ function newNumber() {
 };
 
 useMachine();
+newGame();
