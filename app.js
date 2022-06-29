@@ -3,6 +3,18 @@ let data = {
     turns: 0
 };
 
+let cells = {
+    cell1row1: 1,
+    cell2row1: 2,
+    cell3row1: 3,
+    cell1row2: 4,
+    cell2row2: 5,
+    cell3row2: 6,
+    cell1row3: 7,
+    cell2row3: 8,
+    cell3row3: 9
+}
+
 function newGame() {
     const start = document.getElementById("start");
     start.addEventListener('click', function(e) {
@@ -43,15 +55,29 @@ function updateRow() {
             row.removeChild(cellToRemove);
             let cell = document.createElement("td");
             cell.id = `cell${j}row${i}`;
-            cell.innerHTML = newNumber();
+            cells[`cell${j}row${i}`] = newNumber();
+            cell.innerHTML = cells[`cell${j}row${i}`];
             row.appendChild(cell);
         }
     }
+    countGain();
     updateTokens();
 }
 
+function countGain() {
+    for (let i = 1; i<= 3; i++) {
+        if (cells[`cell1row${i}`] == cells[`cell2row${i}`]) {
+            if (cells[`cell1row${i}`] == cells[`cell2row${i}`] && cells[`cell2row${i}`] == cells[`cell3row${i}`]) {
+                data.tokens += cells[`cell1row${i}`] * cells[`cell2row${i}`] * cells[`cell3row${i}`];
+            } else {
+                data.tokens += cells[`cell1row${i}`] * cells[`cell2row${i}`];
+            }
+        }
+    }
+} console.log(data.tokens);
+
 function newNumber() {
-    return Math.floor(Math.random()*10);
+    return Math.floor(Math.random()*(8 - 1) + 1);
 };
 
 useMachine();
