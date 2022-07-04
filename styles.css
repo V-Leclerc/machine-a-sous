@@ -1,0 +1,82 @@
+body {
+    background-color: #b3daff;
+}
+
+#all_page {
+    position: relative;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#start{
+    width: 100px;
+    height: 50px;
+    font-size: large;
+}
+
+#go {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+}
+
+#the_machine {
+    font-size: 50px;
+    color: darkred;
+    border: 7px solid black;
+    display: flex;
+    flex-grow: 3;
+}
+
+#game_data {
+    margin-top: 5vh;
+    font-size: large;
+}
+
+#cell1row1{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell2row1{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell3row1{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell1row2{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell2row2{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell3row2{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell1row3{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell2row3{
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#cell3row3{
+    padding: 10px;
+    border: 3px solid black;
+}

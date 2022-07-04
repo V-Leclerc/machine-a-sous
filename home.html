@@ -4,38 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Machine à sous</title>
 </head>
 <body>
-    <form id="new_game">
-        <button id="start">Start a new game</button>
-    </form>
-    <br>
-    <table>
-        <tbody>
-            <tr id="row1">
-                <td id="cell1row1">1</td>
-                <td id="cell2row1">2</td>
-                <td id="cell3row1">3</td>
-            </tr>
-            <tr id="row2">
-                <td id="cell1row2">4</td>
-                <td id="cell2row2">5</td>
-                <td id="cell3row2">6</td>
-            </tr>
-            <tr id="row3">
-                <td id="cell1row3">7</td>
-                <td id="cell2row3">8</td>
-                <td id="cell3row3">9</td>
-            </tr>
-        </tbody>
-    </table>
-    <form id="play">
-        <button id="go">Go !</button>
-    </form>
-    <div>
-        <p id="tokens">Jetons : </p>
-        <p id="turns">Nombre de tours : </p>
+    <div id="all_page">
+        <form id="new_game">
+            <button id="start">Start a new game</button>
+        </form>
+        <br>
+        <table id="the_machine">
+            <tbody>
+                <tr id="row1">
+                    <td id="cell1row1">1</td>
+                    <td id="cell2row1">2</td>
+                    <td id="cell3row1">3</td>
+                </tr>
+                <tr id="row2">
+                    <td id="cell1row2">4</td>
+                    <td id="cell2row2">5</td>
+                    <td id="cell3row2">6</td>
+                </tr>
+                <tr id="row3">
+                    <td id="cell1row3">7</td>
+                    <td id="cell2row3">8</td>
+                    <td id="cell3row3">9</td>
+                </tr>
+            </tbody>
+        </table>
+        <form id="play">
+            <button id="go">Go !</button>
+        </form>
+        <div id="game_data">
+            <p id="tokens">Jetons : </p>
+            <p id="turns">Nombre de tours : </p>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
